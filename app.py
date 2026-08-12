@@ -1,0 +1,22 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/deneyim')
+def deneyim():
+    return render_template('deneyim.html')
+
+@app.route('/yetenekler')
+def yetenekler():
+    return render_template('yetenekler.html')
+
+@app.route('/liderlik')
+def liderlik():
+    return render_template('liderlik.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
