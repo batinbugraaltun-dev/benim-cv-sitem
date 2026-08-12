@@ -1,23 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Referanslar içeriğin burada kalacak -->
 <div class="container my-5">
-    <div class="row g-4 mb-5">
-        <div class="col-12">
-            <div class="bg-white p-4 rounded shadow-sm border">
-                <h4 class="fw-bold text-dark mb-4">
-                    <i class="fa-solid fa-user-check text-primary me-2"></i>Referanslar
-                </h4>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="p-3 bg-light rounded border-start border-4 border-primary">
-                            <h6 class="fw-bold mb-1">Enes Evkuran</h6>
-                            <p class="text-muted small mb-0">Detaylı Unvan / Kurum Bilgisi</p>
-                            <p class="text-muted small mb-0"><i class="fa-solid fa-envelope me-1"></i> e-posta veya iletişim bilgisi</p>
-                        </div>
+    <div class="row justify-content-center">
+        <div class="col-md-5 col-lg-4">
+            <!-- Referans Kartı -->
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden text-center">
+                
+                <!-- Koyu Banner Alanı -->
+                <div class="position-relative bg-dark" style="height: 120px; background: linear-gradient(135deg, #1d0f25 0%, #0a050f 100%);">
+                    <!-- Yuvarlak Profil Fotoğrafı -->
+                    <div class="position-absolute start-50 translate-middle-x" style="bottom: -45px;">
+                        <img src="{{ url_for('static', filename='uploads/enes-evkuran.jpg') }}" 
+                             alt="Enes EVKURAN" 
+                             class="rounded-circle border border-3 border-white shadow" 
+                             style="width: 90px; height: 90px; object-fit: cover;">
                     </div>
                 </div>
+
+                <!-- İçerik Alanı -->
+                <div class="card-body pt-5 pb-4 px-4 bg-white">
+                    <h5 class="fw-bold text-dark mb-1 mt-2">Enes EVKURAN</h5>
+                    <p class="fw-bold mb-1" style="color: #61182d;">Community Lead</p>
+                    <p class="text-muted small mb-3">
+                        <i class="fa-regular fa-building me-1"></i>Kariyer.Net-Techcareer.Net
+                    </p>
+
+                    <!-- Etiket -->
+                    <div class="mb-4">
+                        <span class="badge rounded-pill px-3 py-2 fw-normal" style="background-color: #f7e8ed; color: #61182d;">Proje</span>
+                    </div>
+
+                    <!-- LinkedIn Butonu -->
+                    <a href="https://www.linkedin.com/in/enes-evkuran-98b381149/" 
+                       target="_blank" 
+                       class="btn text-white w-100 rounded-pill py-2 fw-semibold d-flex align-items-center justify-content-center gap-2 shadow-sm"
+                       style="background-color: #0066c8;">
+                        <i class="fa-brands fa-linkedin fs-5"></i> LinkedIn Profili
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
