@@ -20,3 +20,11 @@ def liderlik():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    @app.route('/referanslar')
+def referanslar():
+    return render_template('referanslar.html')
+
+    @app.route('/referanslar')
+def referanslar():
+    return render_template('referanslar.html')
