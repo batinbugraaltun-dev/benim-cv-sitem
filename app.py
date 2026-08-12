@@ -25,6 +25,7 @@ if __name__ == '__main__':
 def referanslar():
     return render_template('referanslar.html')
 
-    @app.route('/referanslar')
+  # Doğru Yazım Şekli:
+@app.route('/referanslar')
 def referanslar():
-    return render_template('referanslar.html')
+    return render_template('referanslar.html')  # <- 1 Tab/4 boşluk içeride
