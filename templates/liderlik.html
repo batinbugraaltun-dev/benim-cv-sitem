@@ -1,35 +1,91 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container my-5">
-    <h2 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-users text-primary me-2"></i>Liderlik & Gönüllülük Deneyimleri</h2>
+<div class="container my-5 py-4">
+    
+    <!-- Sayfa Başlığı -->
+    <div class="mb-5">
+        <h2 class="fw-bold text-dark d-flex align-items-center gap-2">
+            <i class="fa-solid fa-users text-primary"></i> Liderlik & Gönüllülük Deneyimleri
+        </h2>
+        <p class="text-muted fs-5">Kulüp yönetimi, organizasyon liderlikleri ve sponsorluk koordinasyonlarım</p>
+    </div>
 
-    <div class="card mb-4 shadow-sm border-0 bg-white">
-        <div class="card-body p-4">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="fw-bold text-dark mb-0">Sponsorship Coordinator — TEDxDEU</h5>
-                <span class="badge bg-danger fs-6">Temmuz 2025 - Devam Ediyor</span>
+    <!-- 1. TEDxDEU -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+        <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" 
+             style="background: #0d6efd;">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-white rounded-3 p-1 d-flex align-items-center justify-content-center shadow-sm" 
+                     style="width: 55px; height: 55px;">
+                    <img src="{{ url_for('static', filename='uploads/tedxdeu-logo.png') }}" 
+                         alt="TEDxDEU Logo" 
+                         class="img-fluid rounded" 
+                         style="max-height: 40px; object-fit: contain;">
+                </div>
+                <div>
+                    <h4 class="fw-bold mb-0 text-white">Sponsorship Coordinator — TEDxDEU</h4>
+                    <span class="text-white-50 fw-medium">Dokuz Eylül Üniversitesi</span>
+                </div>
             </div>
-            <ul class="text-secondary mt-3">
-                <li>Sponsorluk süreçlerini yöneterek 100.000 TL'nin üzerinde fon sağladım ve 5'ten fazla kurumsal ortakla ilişkileri yürüttüm.</li>
-                <li>500'den fazla katılımcının yer aldığı fakülte çapındaki organizasyonda lojistik ve dış iletişimi yönettim.</li>
+            <div class="badge bg-white text-primary px-3 py-2 rounded-pill fw-medium shadow-sm fs-6">
+                <i class="fa-regular fa-calendar-days me-1"></i> Temmuz 2025 – Devam Ediyor
+            </div>
+        </div>
+        <div class="card-body p-4 bg-white">
+            <ul class="text-secondary leading-relaxed mb-3 fs-6 ps-3">
+                <li class="mb-2">Sponsorluk süreçlerini yöneterek 100.000 TL'nin üzerinde fon sağladım ve 5'ten fazla kurumsal ortakla ilişkileri yürüttüm.</li>
+                <li class="mb-2">500'den fazla katılımcının yer aldığı fakülte çapındaki organizasyonda lojistik ve dış iletişimi yönettim.</li>
                 <li>25 Nisan 2026 tarihinde düzenlenen "Hide and Seek" etkinliğinin sponsorluk süreçlerini başarıyla tamamladım.</li>
             </ul>
+
+            <!-- Yetkinlik Rozetleri -->
+            <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Sponsorship Management</span>
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Corporate Relations</span>
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Event Logistics</span>
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Budgeting</span>
+            </div>
         </div>
     </div>
 
-    <div class="card shadow-sm border-0 bg-white">
-        <div class="card-body p-4">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="fw-bold text-dark mb-0">Power & Energy Society Chairman — IEEE DEU</h5>
-                <span class="badge bg-warning text-dark fs-6">Mayıs 2024 - Haziran 2025</span>
+    <!-- 2. IEEE DEU -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+        <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" 
+             style="background: #0d6efd;">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-white rounded-3 p-1 d-flex align-items-center justify-content-center shadow-sm" 
+                     style="width: 55px; height: 55px;">
+                    <img src="{{ url_for('static', filename='uploads/ieeedeu-logo.png') }}" 
+                         alt="IEEE DEU Logo" 
+                         class="img-fluid rounded" 
+                         style="max-height: 40px; object-fit: contain;">
+                </div>
+                <div>
+                    <h4 class="fw-bold mb-0 text-white">Power & Energy Society Chairman — IEEE DEU</h4>
+                    <span class="text-white-50 fw-medium">Dokuz Eylül Üniversitesi Öğrenci Kolu</span>
+                </div>
             </div>
-            <ul class="text-secondary mt-3">
-                <li>5'ten fazla teknik etkinlik düzenledim ve takım operasyonlarını koordine ettim.</li>
-                <li>Sponsorluk ve iletişim süreçlerini yönettim.</li>
+            <div class="badge bg-white text-primary px-3 py-2 rounded-pill fw-medium shadow-sm fs-6">
+                <i class="fa-regular fa-calendar-days me-1"></i> Mayıs 2024 – Haziran 2025
+            </div>
+        </div>
+        <div class="card-body p-4 bg-white">
+            <ul class="text-secondary leading-relaxed mb-3 fs-6 ps-3">
+                <li class="mb-2">5'ten fazla teknik etkinlik düzenledim ve takım operasyonlarını koordine ettim.</li>
+                <li class="mb-2">Sponsorluk ve iletişim süreçlerini yönettim.</li>
                 <li>DETECH24 Sponsorluk Koordinatörlüğü Ekip Üyesi olarak görev aldım.</li>
             </ul>
+
+            <!-- Yetkinlik Rozetleri -->
+            <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Team Leadership</span>
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Technical Events</span>
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">DETECH24</span>
+                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Sponsorship</span>
+            </div>
         </div>
     </div>
+
 </div>
 {% endblock %}
