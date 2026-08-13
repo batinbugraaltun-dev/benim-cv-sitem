@@ -3,7 +3,7 @@
 {% block content %}
 <!-- Hero / Header Banner -->
 <div class="position-relative overflow-hidden py-5" 
-     style="background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('{{ url_for('static', filename='uploads/deu-bg.jpg') }}') center/cover no-repeat; border-bottom: 1px solid #e5d5da;">
+     style="background: linear-gradient(rgba(240, 246, 255, 0.92), rgba(240, 246, 255, 0.92)), url('{{ url_for('static', filename='uploads/deu-bg.jpg') }}') center/cover no-repeat; border-bottom: 1px solid #d0e2ff;">
     
     <div class="container py-4">
         <div class="row align-items-center g-4">
@@ -14,14 +14,14 @@
                     <img src="{{ url_for('static', filename='uploads/profil.jpg') }}" 
                          alt="Batın Buğra ALTUN" 
                          class="rounded-circle shadow-lg" 
-                         style="width: 170px; height: 170px; object-fit: cover; border: 5px solid #fff; outline: 3px solid #61182d;">
+                         style="width: 170px; height: 170px; object-fit: cover; border: 5px solid #fff; outline: 3px solid #0d6efd;">
                 </div>
             </div>
 
             <!-- Kişisel Bilgiler & İletişim Rozetleri -->
             <div class="col-lg-9">
                 <h1 class="display-6 fw-bold text-dark mb-1">Batın Buğra ALTUN</h1>
-                <p class="fs-5 fw-medium mb-3" style="color: #61182d;">Elektrik ve Elektronik Mühendisliği Öğrencisi</p>
+                <p class="fs-5 fw-medium mb-3 text-primary">Elektrik ve Elektronik Mühendisliği Öğrencisi</p>
 
                 <!-- Sosyal Medya & İletişim Pill (Rozet) Butonları -->
                 <div class="d-flex flex-wrap gap-2 mb-4">
@@ -42,13 +42,11 @@
                 <!-- CV İndir & Projelerim Butonları -->
                 <div class="d-flex flex-wrap gap-3">
                     <a href="{{ url_for('static', filename='uploads/CV.pdf') }}" download 
-                       class="btn text-white rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2"
-                       style="background-color: #61182d;">
+                       class="btn btn-primary rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
                         <i class="fa-solid fa-download"></i> CV İndir
                     </a>
                     <a href="{{ url_for('deneyim') }}" 
-                       class="btn bg-white border rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2"
-                       style="color: #61182d; border-color: #61182d !important;">
+                       class="btn btn-outline-primary bg-white rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
                         <i class="fa-solid fa-code"></i> Projelerim
                     </a>
                 </div>
@@ -58,16 +56,16 @@
     </div>
 </div>
 
-<!-- Hakkımda Kartı (Tırnaklı Bordo Tasarım) -->
+<!-- Hakkımda Kartı (Mavi Çizgili Tasarım) -->
 <div class="container my-5 py-3">
     <div class="row justify-content-center">
         <div class="col-lg-9">
             <div class="bg-white rounded-4 p-4 p-md-5 shadow-sm position-relative" 
-                 style="border-left: 6px solid #61182d;">
+                 style="border-left: 6px solid #0d6efd;">
                 
                 <!-- Tırnak Simgesi -->
                 <div class="mb-3">
-                    <i class="fa-solid fa-quote-left fs-1" style="color: #61182d;"></i>
+                    <i class="fa-solid fa-quote-left fs-1 text-primary"></i>
                 </div>
 
                 <p class="fs-5 text-dark leading-relaxed mb-4">
@@ -75,7 +73,7 @@
                 </p>
 
                 <div class="d-flex align-items-center gap-2">
-                    <div style="width: 30px; height: 2px; background-color: #61182d;"></div>
+                    <div style="width: 30px; height: 2px; background-color: #0d6efd;"></div>
                     <span class="fw-bold text-dark">Batın Buğra ALTUN</span>
                     <span class="text-muted small">• Elektrik & Elektronik Mühendisliği</span>
                 </div>
@@ -85,8 +83,8 @@
     </div>
 </div>
 
-<!-- Sayaç / İstatistik Barı (Bordo Şerit) -->
-<div class="py-4 text-white" style="background-color: #61182d;">
+<!-- Sayaç / İstatistik Barı (Mavi Şerit) -->
+<div class="py-4 text-white bg-primary">
     <div class="container">
         <div class="row text-center g-4">
             <div class="col-6 col-md-3">
