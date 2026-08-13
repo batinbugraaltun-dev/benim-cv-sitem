@@ -1,35 +1,93 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container my-5">
-    <h2 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-briefcase text-primary me-2"></i>İş Deneyimleri</h2>
+<div class="container my-5 py-4">
+    
+    <!-- Sayfa Başlığı -->
+    <div class="mb-5">
+        <h2 class="fw-bold text-dark d-flex align-items-center gap-2">
+            <i class="fa-solid fa-briefcase text-primary"></i> Staj & Deneyim
+        </h2>
+        <p class="text-muted fs-5">Staj yaptığım kurumlar, mühendislik deneyimlerim ve iş tecrübelerim</p>
+    </div>
 
-    <div class="card mb-4 shadow-sm border-0 bg-white">
-        <div class="card-body p-4">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="fw-bold text-dark mb-0">Electrical Engineer — YSR Mühendislik</h5>
-                <span class="badge bg-primary fs-6">Temmuz 2025 - Ekim 2025</span>
+    <!-- 1. Microsoft Stajı -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+        <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" 
+             style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-white rounded-3 p-2 d-flex align-items-center justify-content-center shadow-sm" 
+                     style="width: 55px; height: 55px;">
+                    <i class="fa-brands fa-microsoft fs-2 text-primary"></i>
+                </div>
+                <div>
+                    <h4 class="fw-bold mb-0 text-white">Microsoft</h4>
+                    <span class="text-white-50 fw-medium">AI Innovator Summer Intern</span>
+                </div>
             </div>
-            <p class="text-muted fw-semibold mb-3">MSB Sincan Şantiyesi</p>
-            <ul class="text-secondary">
-                <li>MSB Sincan şantiye sahasında elektrik tesisat kurulum süreçlerini denetledim, uygulama aşamasında ortaya çıkan teknik uyumsuzlukları tespit edip çözüme kavuşturdum.</li>
+            <div class="badge bg-white text-primary px-3 py-2 rounded-pill fw-medium shadow-sm fs-6">
+                <i class="fa-regular fa-calendar-days me-1"></i> Temmuz 2026 – Ağustos 2026
+            </div>
+        </div>
+        <div class="card-body p-4 bg-white">
+            <ul class="text-secondary leading-relaxed mb-0 fs-6 ps-3">
+                <li class="mb-2">Microsoft AI Innovator Yaz Stajı kapsamında derin öğrenme mimarileri (LSTM ve GRU) kullanarak Borsa Fiyat Tahmini (Stock Price Prediction) projesi geliştirdim.</li>
+                <li>Zaman serisi verilerinin işlenmesi, model eğitimi ve doğruluk metriklerinin optimizasyonu üzerine çalışmalar yürüttüm.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 2. YSR Mühendislik -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+        <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" 
+             style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-white rounded-3 p-2 d-flex align-items-center justify-content-center shadow-sm" 
+                     style="width: 55px; height: 55px;">
+                    <i class="fa-solid fa-bolt fs-2 text-primary"></i>
+                </div>
+                <div>
+                    <h4 class="fw-bold mb-0 text-white">Electrical Engineer — YSR Mühendislik</h4>
+                    <span class="text-white-50 fw-medium">MSB Sincan Şantiyesi</span>
+                </div>
+            </div>
+            <div class="badge bg-white text-primary px-3 py-2 rounded-pill fw-medium shadow-sm fs-6">
+                <i class="fa-regular fa-calendar-days me-1"></i> Temmuz 2025 – Ekim 2025
+            </div>
+        </div>
+        <div class="card-body p-4 bg-white">
+            <ul class="text-secondary leading-relaxed mb-0 fs-6 ps-3">
+                <li class="mb-2">MSB Sincan şantiye sahasında elektrik tesisat kurulum süreçlerini denetledim, uygulama aşamasında ortaya çıkan teknik uyumsuzlukları tespit edip çözüme kavuşturdum.</li>
                 <li>Yer altı ve başüstü kablolama sistemlerinin AutoCAD projelerini teknik standartlara uygunluk açısından denetledim ve revize ettim.</li>
             </ul>
         </div>
     </div>
 
-    <div class="card shadow-sm border-0 bg-white">
-        <div class="card-body p-4">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="fw-bold text-dark mb-0">Laboratuvar Asistanı & Ideathon Koordinatörü — İŞKUR Gençlik Programı</h5>
-                <span class="badge bg-secondary fs-6">Kasım 2025 - Haziran 2026</span>
+    <!-- 3. İŞKUR Gençlik Programı -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+        <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" 
+             style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-white rounded-3 p-2 d-flex align-items-center justify-content-center shadow-sm" 
+                     style="width: 55px; height: 55px;">
+                    <i class="fa-solid fa-flask fs-2 text-primary"></i>
+                </div>
+                <div>
+                    <h4 class="fw-bold mb-0 text-white">Laboratuvar Asistanı & Ideathon Koordinatörü — İŞKUR Gençlik Programı</h4>
+                    <span class="text-white-50 fw-medium">Dokuz Eylül Üniversitesi EEE Bölümü</span>
+                </div>
             </div>
-            <p class="text-muted fw-semibold mb-3">Dokuz Eylül Üniversitesi EEE Bölümü</p>
-            <ul class="text-secondary">
-                <li>Elektrik-Elektronik Mühendisliği departman laboratuvarlarında deney kurulumları, ekipman yönetimi ve operasyonel süreçlerde asistanlık yaptım.</li>
+            <div class="badge bg-white text-primary px-3 py-2 rounded-pill fw-medium shadow-sm fs-6">
+                <i class="fa-regular fa-calendar-days me-1"></i> Kasım 2025 – Haziran 2026
+            </div>
+        </div>
+        <div class="card-body p-4 bg-white">
+            <ul class="text-secondary leading-relaxed mb-0 fs-6 ps-3">
+                <li class="mb-2">Elektrik-Elektronik Mühendisliği departman laboratuvarlarında deney kurulumları, ekipman yönetimi ve operasyonel süreçlerde asistanlık yaptım.</li>
                 <li>Mühendislik Dekanlığı bünyesinde fakülte genelini kapsayan Ideathon organizasyonunu koordine ettim.</li>
             </ul>
         </div>
     </div>
+
 </div>
 {% endblock %}
