@@ -1,36 +1,119 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container my-5">
-    <h2 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-gears text-primary me-2"></i>Teknik Beceriler & Sertifikalar</h2>
+<div class="container my-5 py-4">
+    
+    <!-- Sayfa Başlığı -->
+    <div class="mb-5">
+        <h2 class="fw-bold text-dark d-flex align-items-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-primary"></i> Yetenekler
+        </h2>
+        <p class="text-muted fs-5">Bildiğim diller, teknolojiler, mühendislik araçları ve yetkinlikler</p>
+    </div>
 
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="p-4 bg-white rounded shadow-sm border h-100">
-                <h4 class="fw-bold text-dark mb-3"><i class="fa-solid fa-wrench text-warning me-2"></i>Teknik Yetenekler</h4>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>AutoCAD:</strong> Elektrik Çizimleri ve Tesisat Projelendirmesi</li>
-                    <li class="list-group-item"><strong>Elektrik Tesisatı & Kablolama:</strong> Yeraltı / Başüstü Sistemleri</li>
-                    <li class="list-group-item"><strong>Proteus & MATLAB:</strong> Devre Simülasyonu ve Analiz</li>
-                    <li class="list-group-item"><strong>MS Office Paketleri:</strong> Raporlama ve İdari Araçlar</li>
-                </ul>
+    <!-- 1. Programlama Dilleri -->
+    <div class="mb-4 pb-3 border-bottom">
+        <h5 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-angle-right text-primary"></i> Programlama Dilleri
+        </h5>
+        <div class="d-flex flex-wrap gap-3">
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Python</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
             </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="p-4 bg-white rounded shadow-sm border h-100">
-                <h4 class="fw-bold text-dark mb-3"><i class="fa-solid fa-certificate text-success me-2"></i>Sertifikalar & Diller</h4>
-                <div class="mb-3">
-                    <h6><strong>Basic HSE (İş Sağlığı ve Güvenliği)</strong></h6>
-                    <small class="text-muted">Dokuz Eylül Üniversitesi</small>
-                </div>
-                <hr>
-                <div>
-                    <p class="mb-1"><strong>Türkçe:</strong> Ana Dil</p>
-                    <p class="mb-0"><strong>İngilizce:</strong> B2 Seviyesi</p>
-                </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">MATLAB</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">C / C++</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">Orta</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">HTML / CSS</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">Orta</span>
             </div>
         </div>
     </div>
+
+    <!-- 2. Mühendislik & Teknik Araçlar -->
+    <div class="mb-4 pb-3 border-bottom">
+        <h5 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-angle-right text-primary"></i> Mühendislik & Teknik Araçlar
+        </h5>
+        <div class="d-flex flex-wrap gap-3">
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">AutoCAD</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">LTSpice / Proteus</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Oscilloscope & Lab Ekipmanları</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">VS Code</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Git / GitHub</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">Orta</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Frameworks & Kütüphaneler -->
+    <div class="mb-4 pb-3 border-bottom">
+        <h5 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-angle-right text-primary"></i> Frameworks & Kütüphaneler
+        </h5>
+        <div class="d-flex flex-wrap gap-3">
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Flask</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">Orta</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">NumPy & Pandas</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">Orta</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">TensorFlow / Keras (LSTM, GRU)</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">Orta</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Matplotlib</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Yapay Zeka & Prodüktivite Araçları -->
+    <div class="mb-4">
+        <h5 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-angle-right text-primary"></i> Yapay Zeka Araçları
+        </h5>
+        <div class="d-flex flex-wrap gap-3">
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">ChatGPT</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Gemini</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">Claude</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+            <div class="bg-white px-3 py-2 rounded-pill border shadow-sm d-flex align-items-center gap-2">
+                <span class="fw-semibold text-dark">DeepSeek</span>
+                <span class="badge rounded-pill text-primary" style="background-color: #e7f1ff;">İleri</span>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}
