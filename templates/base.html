@@ -25,35 +25,54 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav gap-1">
+                    
+                    <!-- Ana Sayfa -->
                     <li class="nav-item">
-                        <a class="nav-link px-3 rounded-pill fw-medium active" style="background-color: #e7f1ff; color: #0d6efd;" href="/">
+                        <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/' %}active-pill{% else %}text-dark{% endif %}" href="/">
                             <i class="fa-solid fa-house me-1"></i> Ana Sayfa
                         </a>
                     </li>
+
+                    <!-- Staj & Deneyim -->
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('deneyim') }}">
+                        <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/deneyim' %}active-pill{% else %}text-dark{% endif %}" href="{{ url_for('deneyim') }}">
                             <i class="fa-solid fa-briefcase me-1"></i> Staj & Deneyim
                         </a>
                     </li>
+
+                    <!-- Yetenekler -->
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('yetenekler') }}">
+                        <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/yetenekler' %}active-pill{% else %}text-dark{% endif %}" href="{{ url_for('yetenekler') }}">
                             <i class="fa-solid fa-wand-magic-sparkles me-1"></i> Yetenekler
                         </a>
                     </li>
+
+                    <!-- Liderlik -->
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('liderlik') }}">
+                        <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/liderlik' %}active-pill{% else %}text-dark{% endif %}" href="{{ url_for('liderlik') }}">
                             <i class="fa-solid fa-users me-1"></i> Liderlik
                         </a>
                     </li>
+
+                    <!-- Referanslar -->
                     <li class="nav-item">
-                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('referanslar') }}">
+                        <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/referanslar' %}active-pill{% else %}text-dark{% endif %}" href="{{ url_for('referanslar') }}">
                             <i class="fa-solid fa-user-check me-1"></i> Referanslar
                         </a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Mavi Aktif Sekme Stili -->
+    <style>
+        .active-pill {
+            background-color: #e7f1ff !important;
+            color: #0d6efd !important;
+        }
+    </style>
 
     {% block content %}
     {% endblock %}
