@@ -3,41 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batın Buğra ALTUN | EEE Portfolyo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Batın Buğra ALTUN - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body style="background-color: #fcf4f6;">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white py-2 border-bottom shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/">Batın Buğra ALTUN</a>
+            <a class="navbar-brand fw-bold text-dark d-flex align-items-center gap-2" href="/">
+                <i class="fa-solid fa-user-graduate" style="color: #61182d;"></i>
+                Batın Buğra ALTUN
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/deneyim"><i class="fa-solid fa-briefcase"></i> Deneyim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/yetenekler"><i class="fa-solid fa-gears"></i> Beceriler & Eğitim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/liderlik"><i class="fa-solid fa-users"></i> Liderlik & Etkinlikler</a></li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-1">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('referanslar') }}">Referanslar</a>
-</li>
+                        <a class="nav-link px-3 rounded-pill fw-medium active" style="background-color: #f7e8ed; color: #61182d;" href="/">
+                            <i class="fa-solid fa-house me-1"></i> Ana Sayfa
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('deneyim') }}">
+                            <i class="fa-solid fa-briefcase me-1"></i> Staj & Deneyim
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('yetenekler') }}">
+                            <i class="fa-solid fa-wand-magic-sparkles me-1"></i> Yetenekler
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('liderlik') }}">
+                            <i class="fa-solid fa-users me-1"></i> Liderlik
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-dark fw-medium" href="{{ url_for('referanslar') }}">
+                            <i class="fa-solid fa-user-check me-1"></i> Referanslar
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    {% block content %}
+    {% endblock %}
 
-    <footer class="bg-dark text-white text-center py-3 mt-5 border-top border-secondary">
-        <p class="mb-0">© 2026 Batın Buğra ALTUN - Elektrik & Elektronik Mühendisi</p>
+    <!-- Footer -->
+    <footer class="bg-white py-3 text-center border-top mt-auto">
+        <small class="text-muted">© 2026 Batın Buğra ALTUN - Tüm Hakları Saklıdır.</small>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

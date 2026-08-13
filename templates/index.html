@@ -1,86 +1,111 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container my-5">
+<!-- Hero / Header Banner -->
+<div class="position-relative overflow-hidden py-5" 
+     style="background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('{{ url_for('static', filename='uploads/deu-bg.jpg') }}') center/cover no-repeat; border-bottom: 1px solid #e5d5da;">
     
-    <!-- Hero / Profil Kartı -->
-    <div class="row align-items-center hero-section p-4 p-md-5 rounded shadow-sm border mb-5 bg-white">
-        <div class="col-md-4 text-center mb-4 mb-md-0">
-            <img src="{{ url_for('static', filename='uploads/profil.jpg') }}" alt="Batın Buğra ALTUN" class="profile-img rounded-circle mb-3">
-        </div>
-        <div class="col-md-8">
-            <h1 class="fw-bold text-dark mb-1">Batın Buğra ALTUN</h1>
-            <p class="text-primary fw-semibold fs-5 mb-3">Electrical and Electronics Engineering Student</p>
+    <div class="container py-4">
+        <div class="row align-items-center g-4">
             
-            <div class="d-flex flex-wrap gap-3 mb-4 text-muted fs-6">
-                <span><i class="fa-solid fa-location-dot text-danger me-1"></i> İzmir, Türkiye</span>
-                <a href="mailto:batinbugraaltun@gmail.com" class="text-decoration-none text-muted"><i class="fa-solid fa-envelope text-primary me-1"></i> batinbugraaltun@gmail.com</a>
-                <span><i class="fa-solid fa-phone text-success me-1"></i> +90 553 165 4013</span>
+            <!-- Profil Resmi -->
+            <div class="col-auto">
+                <div class="position-relative">
+                    <img src="{{ url_for('static', filename='uploads/profil.jpg') }}" 
+                         alt="Batın Buğra ALTUN" 
+                         class="rounded-circle shadow-lg" 
+                         style="width: 170px; height: 170px; object-fit: cover; border: 5px solid #fff; outline: 3px solid #61182d;">
+                </div>
             </div>
 
-            <div class="mb-4">
-                <a href="https://www.linkedin.com/in/batinbugraaltun" target="_blank" class="btn btn-outline-primary btn-sm me-2"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
+            <!-- Kişisel Bilgiler & İletişim Rozetleri -->
+            <div class="col-lg-9">
+                <h1 class="display-6 fw-bold text-dark mb-1">Batın Buğra ALTUN</h1>
+                <p class="fs-5 fw-medium mb-3" style="color: #61182d;">Elektrik ve Elektronik Mühendisliği Öğrencisi</p>
+
+                <!-- Sosyal Medya & İletişim Pill (Rozet) Butonları -->
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="badge bg-white text-dark border rounded-pill px-3 py-2 fw-normal shadow-sm">
+                        <i class="fa-solid fa-location-dot me-1 text-danger"></i> İzmir / Türkiye
+                    </span>
+                    <a href="mailto:batinbugraaltun@gmail.com" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
+                        <i class="fa-regular fa-envelope me-1 text-primary"></i> e-posta Gönder
+                    </a>
+                    <a href="https://linkedin.com/in/batinbugraaltun" target="_blank" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
+                        <i class="fa-brands fa-linkedin me-1 text-primary"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/batinbugraaltun-dev" target="_blank" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
+                        <i class="fa-brands fa-github me-1 text-dark"></i> GitHub
+                    </a>
+                </div>
+
+                <!-- CV İndir & Projelerim Butonları -->
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{{ url_for('static', filename='uploads/CV.pdf') }}" download 
+                       class="btn text-white rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2"
+                       style="background-color: #61182d;">
+                        <i class="fa-solid fa-download"></i> CV İndir
+                    </a>
+                    <a href="{{ url_for('deneyim') }}" 
+                       class="btn bg-white border rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2"
+                       style="color: #61182d; border-color: #61182d !important;">
+                        <i class="fa-solid fa-code"></i> Projelerim
+                    </a>
+                </div>
             </div>
 
-            <a href="{{ url_for('static', filename='uploads/CV.pdf') }}" class="btn btn-success me-2 shadow-sm" download>
-                <i class="fa-solid fa-file-pdf me-1"></i> CV İndir (PDF)
-            </a>
-            <a href="/deneyim" class="btn btn-primary shadow-sm">Deneyimlerimi İncele</a>
         </div>
     </div>
+</div>
 
-    <!-- Özet & Eğitim -->
-    <div class="row g-4 mb-5">
-        <div class="col-md-7">
-            <div class="bg-white p-4 rounded shadow-sm border h-100">
-                <h4 class="fw-bold text-dark mb-3"><i class="fa-solid fa-user text-primary me-2"></i>Hakkımda</h4>
-                <p class="text-muted leading-relaxed">
-                    Dokuz Eylül Üniversitesi Elektrik-Elektronik Mühendisliği bölümünde eğitimime devam etmekteyim. Saha mühendisliği denetimleri, AutoCAD elektrik projelendirmesi, laboratuvar yönetimi ve büyük ölçekli organizasyonlarda sponsorluk/liderlik koordinasyonları üzerine deneyim sahibiyim.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="bg-white p-4 rounded shadow-sm border h-100">
-                <h4 class="fw-bold text-dark mb-3"><i class="fa-solid fa-graduation-cap text-primary me-2"></i>Eğitim</h4>
+<!-- Hakkımda Kartı (Tırnaklı Bordo Tasarım) -->
+<div class="container my-5 py-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="bg-white rounded-4 p-4 p-md-5 shadow-sm position-relative" 
+                 style="border-left: 6px solid #61182d;">
+                
+                <!-- Tırnak Simgesi -->
                 <div class="mb-3">
-                    <h6 class="fw-bold mb-0">Dokuz Eylül Üniversitesi (2022 - Devam)</h6>
-                    <small class="text-muted">Lisans - Elektrik ve Elektronik Mühendisliği</small>
+                    <i class="fa-solid fa-quote-left fs-1" style="color: #61182d;"></i>
                 </div>
-                <div>
-                    <h6 class="fw-bold mb-0">Şehit Ömer Halisdemir Anadolu Lisesi (2017 - 2021)</h6>
-                    <small class="text-muted">Fen ve Matematik Programı</small>
+
+                <p class="fs-5 text-dark leading-relaxed mb-4">
+                    Dokuz Eylül Üniversitesi Elektrik-Elektronik Mühendisliği öğrencisiyim. Saha denetimleri, AutoCAD projelendirmesi, yapay zeka/makine öğrenmesi uygulamaları ve büyük ölçekli organizasyonlarda sponsorluk ile liderlik koordinasyonları üzerine aktif çalışmalar yürütüyorum.
+                </p>
+
+                <div class="d-flex align-items-center gap-2">
+                    <div style="width: 30px; height: 2px; background-color: #61182d;"></div>
+                    <span class="fw-bold text-dark">Batın Buğra ALTUN</span>
+                    <span class="text-muted small">• Elektrik & Elektronik Mühendisliği</span>
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Sayaçlar -->
-    <div class="row text-center g-4 mb-5">
-        <div class="col-md-3 col-6">
-            <div class="p-4 bg-white rounded shadow-sm border">
-                <h2 class="fw-bold text-primary mb-1">₺100K+</h2>
-                <p class="text-muted mb-0 fw-medium">Sponsorluk Bütçesi</p>
+<!-- Sayaç / İstatistik Barı (Bordo Şerit) -->
+<div class="py-4 text-white" style="background-color: #61182d;">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3">
+                <h2 class="fw-bold display-6 mb-0">₺100K+</h2>
+                <span class="text-white-50 small fw-bold text-uppercase">Sponsorluk Bütçesi</span>
             </div>
-        </div>
-        <div class="col-md-3 col-6">
-            <div class="p-4 bg-white rounded shadow-sm border">
-                <h2 class="fw-bold text-success mb-1">500+</h2>
-                <p class="text-muted mb-0 fw-medium">Etkinlik Katılımcısı</p>
+            <div class="col-6 col-md-3">
+                <h2 class="fw-bold display-6 mb-0">500+</h2>
+                <span class="text-white-50 small fw-bold text-uppercase">Katılımcı / Etkinlik</span>
             </div>
-        </div>
-        <div class="col-md-3 col-6">
-            <div class="p-4 bg-white rounded shadow-sm border">
-                <h2 class="fw-bold text-warning mb-1">5+</h2>
-                <p class="text-muted mb-0 fw-medium">Teknik Etkinlik</p>
+            <div class="col-6 col-md-3">
+                <h2 class="fw-bold display-6 mb-0">10+</h2>
+                <span class="text-white-50 small fw-bold text-uppercase">Teknik Proje</span>
             </div>
-        </div>
-        <div class="col-md-3 col-6">
-            <div class="p-4 bg-white rounded shadow-sm border">
-                <h2 class="fw-bold text-info mb-1">B2</h2>
-                <p class="text-muted mb-0 fw-medium">İngilizce Seviyesi</p>
+            <div class="col-6 col-md-3">
+                <h2 class="fw-bold display-6 mb-0">1</h2>
+                <span class="text-white-50 small fw-bold text-uppercase">Staj & Deneyim</span>
             </div>
         </div>
     </div>
-
 </div>
 {% endblock %}
