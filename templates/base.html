@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +10,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <style>
+        /* Açık & Koyu Tema Özel Stilleri */
+        [data-bs-theme="light"] body {
+            background-color: #f4f8fb;
+            color: #212529;
+        }
+        [data-bs-theme="dark"] body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        /* Navbar Aktif Sekme */
+        [data-bs-theme="light"] .active-pill {
+            background-color: #e7f1ff !important;
+            color: #0d6efd !important;
+        }
+        [data-bs-theme="dark"] .active-pill {
+            background-color: #1e293b !important;
+            color: #60a5fa !important;
+        }
+
+        /* Dark Modda Kartlar ve Kutular */
+        [data-bs-theme="dark"] .bg-white {
+            background-color: #1e293b !important;
+            color: #f8fafc !important;
+        }
+        [data-bs-theme="dark"] .navbar {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+        [data-bs-theme="dark"] footer {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+        [data-bs-theme="dark"] .text-dark {
+            color: #f8fafc !important;
+        }
+        [data-bs-theme="dark"] .text-secondary, 
+        [data-bs-theme="dark"] .text-muted {
+            color: #94a3b8 !important;
+        }
+        [data-bs-theme="dark"] .border {
+            border-color: #334155 !important;
+        }
+        [data-bs-theme="dark"] .border-bottom {
+            border-bottom-color: #334155 !important;
+        }
+
+        /* Dark Modda Rozetler */
+        [data-bs-theme="dark"] .badge[style*="#e7f1ff"] {
+            background-color: #0f172a !important;
+            color: #60a5fa !important;
+            border-color: #334155 !important;
+        }
+    </style>
 </head>
-<body style="background-color: #f4f8fb;">
+<body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white py-2 border-bottom shadow-sm">
@@ -24,7 +80,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav gap-1">
+                <ul class="navbar-nav align-items-lg-center gap-1">
                     
                     <!-- Ana Sayfa -->
                     <li class="nav-item">
@@ -61,18 +117,17 @@
                         </a>
                     </li>
 
+                    <!-- Tema Değiştirme Butonu (Toggle) -->
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <button id="themeToggleBtn" class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Temayı Değiştir">
+                            <i id="themeIcon" class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Mavi Aktif Sekme Stili -->
-    <style>
-        .active-pill {
-            background-color: #e7f1ff !important;
-            color: #0d6efd !important;
-        }
-    </style>
 
     {% block content %}
     {% endblock %}
@@ -84,5 +139,32 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dark / Light Mode Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        // Sayfa yüklendiğinde kayıtlı temayı kontrol et
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'dark') {
+                themeIcon.className = 'fa-solid fa-sun text-warning';
+            } else {
+                themeIcon.className = 'fa-solid fa-moon text-secondary';
+            }
+        }
+    </script>
 </body>
 </html>
