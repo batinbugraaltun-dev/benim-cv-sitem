@@ -23,13 +23,16 @@
                 <h1 class="display-6 fw-bold text-dark mb-1">Batın Buğra ALTUN</h1>
                 <p class="fs-5 fw-medium mb-3 text-primary">Elektrik ve Elektronik Mühendisliği Öğrencisi</p>
 
-                <!-- Sosyal Medya & İletişim Pill (Rozet) Butonları -->
+                <!-- Sosyal Medya & İletişim Rozetleri -->
                 <div class="d-flex flex-wrap gap-2 mb-4">
                     <span class="badge bg-white text-dark border rounded-pill px-3 py-2 fw-normal shadow-sm">
                         <i class="fa-solid fa-location-dot me-1 text-danger"></i> İzmir / Türkiye
                     </span>
+                    <a href="tel:+905531654013" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
+                        <i class="fa-solid fa-phone me-1 text-success"></i> +90 553 165 4013
+                    </a>
                     <a href="mailto:batinbugraaltun@gmail.com" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
-                        <i class="fa-regular fa-envelope me-1 text-primary"></i> e-posta Gönder
+                        <i class="fa-regular fa-envelope me-1 text-primary"></i> e-posta
                     </a>
                     <a href="https://linkedin.com/in/batinbugraaltun" target="_blank" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
                         <i class="fa-brands fa-linkedin me-1 text-primary"></i> LinkedIn
@@ -39,15 +42,26 @@
                     </a>
                 </div>
 
-                <!-- CV İndir & Projelerim Butonları -->
+                <!-- Butonlar: CV İndir, CV Önizle, Projelerim -->
                 <div class="d-flex flex-wrap gap-3">
+                    <!-- CV İndir -->
                     <a href="{{ url_for('static', filename='uploads/CV.pdf') }}" download 
                        class="btn btn-primary rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
                         <i class="fa-solid fa-download"></i> CV İndir
                     </a>
+                    
+                    <!-- CV Önizle (Modal Tetikleyici) -->
+                    <button type="button" 
+                            class="btn btn-outline-primary bg-white rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#cvModal">
+                        <i class="fa-regular fa-eye"></i> CV Önizle
+                    </button>
+
+                    <!-- Projelerim -->
                     <a href="{{ url_for('deneyim') }}" 
-                       class="btn btn-outline-primary bg-white rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
-                        <i class="fa-solid fa-code"></i> Projelerim
+                       class="btn btn-light border rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-code text-primary"></i> Deneyim & Projeler
                     </a>
                 </div>
             </div>
@@ -95,7 +109,7 @@
                 <span class="text-white-50 small fw-bold text-uppercase">Teknik Proje</span>
             </div>
             <div class="col-6 col-md-3">
-                <h2 class="fw-bold display-6 mb-0">1</h2>
+                <h2 class="fw-bold display-6 mb-0">3</h2>
                 <span class="text-white-50 small fw-bold text-uppercase">Staj & Deneyim</span>
             </div>
         </div>
@@ -135,15 +149,15 @@
                         Microsoft AI Innovator Yaz Stajı kapsamında derin öğrenme mimarileri (LSTM ve GRU) kullanarak Borsa Fiyat Tahmini (Stock Price Prediction) projesi geliştirdim.
                     </p>
                     <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-2 border-top">
-    <div class="d-flex flex-wrap gap-2">
-        <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">Python</span>
-        <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">LSTM & GRU</span>
-        <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">PyTorch</span>
-    </div>
-    <a href="https://github.com/batinbugraaltun-dev/Stock-Price-Prediction-PyTorch" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill px-3 py-1 fw-semibold d-inline-flex align-items-center gap-1 shadow-sm">
-        <i class="fa-brands fa-github"></i> GitHub
-    </a>
-</div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">Python</span>
+                            <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">LSTM & GRU</span>
+                            <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">PyTorch</span>
+                        </div>
+                        <a href="https://github.com/batinbugraaltun-dev/Stock-Price-Prediction-PyTorch" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill px-3 py-1 fw-semibold d-inline-flex align-items-center gap-1 shadow-sm">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -226,6 +240,23 @@
     <a href="{{ url_for('yetenekler') }}" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm">
         Tüm Yetenekleri İncele <i class="fa-solid fa-arrow-right ms-2"></i>
     </a>
+</div>
+
+<!-- ==================== CV ÖNİZLEME MODALI ==================== -->
+<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" style="height: 90vh;">
+        <div class="modal-content h-100 shadow-lg rounded-4 overflow-hidden border-0">
+            <div class="modal-header bg-primary text-white py-3">
+                <h5 class="modal-title fw-bold" id="cvModalLabel">
+                    <i class="fa-solid fa-file-pdf me-2"></i>Batın Buğra ALTUN — Özgeçmiş (CV)
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body p-0" style="height: calc(100% - 60px);">
+                <iframe src="{{ url_for('static', filename='uploads/CV.pdf') }}" width="100%" height="100%" style="border: none;"></iframe>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
