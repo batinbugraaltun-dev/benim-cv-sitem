@@ -89,6 +89,13 @@
                         </a>
                     </li>
 
+                    <!-- Projeler -->
+                    <li class="nav-item">
+                        <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/projeler' %}active-pill{% else %}text-dark{% endif %}" href="{{ url_for('projeler') }}">
+                            <i class="fa-solid fa-code me-1"></i> Projeler
+                        </a>
+                    </li>
+
                     <!-- Staj & Deneyim -->
                     <li class="nav-item">
                         <a class="nav-link px-3 rounded-pill fw-medium {% if request.path == '/deneyim' %}active-pill{% else %}text-dark{% endif %}" href="{{ url_for('deneyim') }}">
@@ -146,7 +153,6 @@
         const themeIcon = document.getElementById('themeIcon');
         const htmlElement = document.documentElement;
 
-        // Sayfa yüklendiğinde kayıtlı temayı kontrol et
         const savedTheme = localStorage.getItem('theme') || 'light';
         setTheme(savedTheme);
 
