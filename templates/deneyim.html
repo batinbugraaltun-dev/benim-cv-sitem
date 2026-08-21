@@ -38,20 +38,30 @@
                 <li>Zaman serisi verilerinin işlenmesi, model eğitimi ve doğruluk metriklerinin optimizasyonu üzerine çalışmalar yürüttüm.</li>
             </ul>
 
-            <!-- Yetkinlik Rozetleri ve GitHub Butonu -->
+            <!-- Yetkinlik Rozetleri, Sertifika ve GitHub Butonları -->
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-3 border-top">
                 <div class="d-flex flex-wrap gap-2">
                     <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Python</span>
                     <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">LSTM & GRU</span>
-                    <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">TensorFlow / PyTorch</span>
-                    <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Time Series Analysis</span>
+                    <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">PyTorch</span>
                 </div>
-                <!-- GitHub Butonu -->
-                <a href="https://github.com/batinbugraaltun-dev/Stock-Price-Prediction-PyTorch" 
-                   target="_blank" 
-                   class="btn btn-outline-dark btn-sm rounded-pill px-3 py-2 fw-semibold d-inline-flex align-items-center gap-2 shadow-sm">
-                    <i class="fa-brands fa-github fs-6"></i> Proje Kodları (GitHub)
-                </a>
+                
+                <div class="d-flex flex-wrap gap-2">
+                    <!-- Sertifika Görüntüle Butonu -->
+                    <button type="button" 
+                            class="btn btn-outline-primary btn-sm rounded-pill px-3 py-2 fw-semibold d-inline-flex align-items-center gap-1 shadow-sm"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#microsoftCertModal">
+                        <i class="fa-solid fa-certificate"></i> Sertifikayı Görüntüle
+                    </button>
+
+                    <!-- GitHub Butonu -->
+                    <a href="https://github.com/batinbugraaltun-dev/Stock-Price-Prediction-PyTorch" 
+                       target="_blank" 
+                       class="btn btn-outline-dark btn-sm rounded-pill px-3 py-2 fw-semibold d-inline-flex align-items-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-github fs-6"></i> GitHub
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -87,7 +97,6 @@
                 <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">AutoCAD</span>
                 <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Electrical Design</span>
                 <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Site Inspection</span>
-                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Quality Control</span>
             </div>
         </div>
     </div>
@@ -121,12 +130,31 @@
 
             <div class="d-flex flex-wrap gap-2 pt-2 border-top">
                 <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Lab Equipment</span>
-                <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Event Management</span>
                 <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Ideathon Coordination</span>
                 <span class="badge rounded-pill fw-normal px-3 py-2 border" style="background-color: #e7f1ff; color: #0d6efd;">Leadership</span>
             </div>
         </div>
     </div>
 
+</div>
+
+<!-- ==================== MICROSOFT SERTİFİKA MODALI ==================== -->
+<div class="modal fade" id="microsoftCertModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content shadow-lg rounded-4 overflow-hidden border-0">
+            <div class="modal-header bg-primary text-white py-3">
+                <h5 class="modal-title fw-bold" id="certModalLabel">
+                    <i class="fa-solid fa-certificate me-2"></i>Microsoft AI Innovator Sertifikası
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body p-3 text-center bg-light">
+                <!-- Eğer dosya resim ise img etiketi: -->
+                <img src="{{ url_for('static', filename='uploads/microsoft-sertifika.jpg') }}" 
+                     alt="Microsoft AI Innovator Sertifikası" 
+                     class="img-fluid rounded shadow-sm border" style="max-height: 75vh;">
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
