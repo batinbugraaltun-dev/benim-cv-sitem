@@ -29,7 +29,7 @@
                         <i class="fa-solid fa-location-dot me-1 text-danger"></i> İzmir / Türkiye
                     </span>
                     <a href="tel:+905531654013" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
-                        <i class="fa-solid fa-phone me-1 text-success"></i> +90 553 165 4013
+                        <i class="fa-solid fa-phone me-1 text-success"></i> +90 553 165 40 13
                     </a>
                     <a href="mailto:batinbugraaltun@gmail.com" class="badge bg-white text-dark border text-decoration-none rounded-pill px-3 py-2 fw-normal shadow-sm">
                         <i class="fa-regular fa-envelope me-1 text-primary"></i> e-posta
@@ -42,30 +42,30 @@
                     </a>
                 </div>
 
-                <!-- Butonlar: CV İndir, CV Önizle, Projelerim -->
-                <div class="d-flex flex-wrap gap-3">
-                    <!-- CV İndir -->
-                    <a href="{{ url_for('static', filename='uploads/CV.pdf') }}" download 
-                       class="btn btn-primary rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
-                        <i class="fa-solid fa-download"></i> CV İndir
-                    </a>
-                    
-                    <!-- CV Önizle (Modal Tetikleyici) -->
-                    <button type="button" 
-                            class="btn btn-outline-primary bg-white rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2"
-                            data-bs-toggle="modal" 
-                            data-bs-target="#cvModal">
-                        <i class="fa-regular fa-eye"></i> CV Önizle
-                    </button>
+                <!-- 4'lü CV Butonları -->
+                <div class="d-flex flex-wrap gap-2 pt-1">
+                    <!-- English CV Buton Grubu -->
+                    <div class="btn-group shadow-sm">
+                        <a href="{{ url_for('static', filename='uploads/CV_EN.pdf') }}" download class="btn btn-primary px-3 py-2 fw-semibold">
+                            <i class="fa-solid fa-download me-1"></i> CV English İndir
+                        </a>
+                        <button type="button" class="btn btn-primary border-start px-3 py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#cvEnModal" title="Önizle">
+                            <i class="fa-regular fa-eye me-1"></i> CV English Önizle
+                        </button>
+                    </div>
 
-                    <!-- Projelerim -->
-                    <a href="{{ url_for('deneyim') }}" 
-                       class="btn btn-light border rounded-3 px-4 py-2 fw-semibold shadow-sm d-flex align-items-center gap-2">
-                        <i class="fa-solid fa-code text-primary"></i> Deneyim & Projeler
-                    </a>
+                    <!-- Türkçe CV Buton Grubu -->
+                    <div class="btn-group shadow-sm">
+                        <a href="{{ url_for('static', filename='uploads/CV_TR.pdf') }}" download class="btn btn-outline-primary bg-white px-3 py-2 fw-semibold">
+                            <i class="fa-solid fa-download me-1"></i> CV Türkçe İndir
+                        </a>
+                        <button type="button" class="btn btn-outline-primary bg-white px-3 py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#cvTrModal" title="Önizle">
+                            <i class="fa-regular fa-eye me-1"></i> CV Türkçe Önizle
+                        </button>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 </div>
@@ -92,7 +92,7 @@
     </div>
 </div>
 
-<!-- İstatistik Barı (Mavi Şerit) -->
+<!-- İstatistik Barı -->
 <div class="py-4 text-white bg-primary my-5">
     <div class="container">
         <div class="row text-center g-4">
@@ -116,8 +116,6 @@
     </div>
 </div>
 
-<!-- ==================== AŞAĞI KAYDIRDIKÇA ÖNE ÇIKAN BÖLÜMLER ==================== -->
-
 <!-- 1. BÖLÜM: Staj & İş Deneyimi Özeti -->
 <div class="container my-5 py-3">
     <div class="text-center mb-4">
@@ -128,7 +126,6 @@
 
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <!-- Öne Çıkan Microsoft Kartı -->
             <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
                 <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" style="background: #0d6efd;">
                     <div class="d-flex align-items-center gap-3">
@@ -161,7 +158,6 @@
                 </div>
             </div>
 
-            <!-- Tıklama / Detay Butonu -->
             <div class="text-center">
                 <a href="{{ url_for('deneyim') }}" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm">
                     Tüm Deneyimleri Gör <i class="fa-solid fa-arrow-right ms-2"></i>
@@ -183,7 +179,6 @@
 
     <div class="row justify-content-center">
         <div class="col-lg-10">
-            <!-- Öne Çıkan TEDxDEU Kartı -->
             <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
                 <div class="p-4 text-white d-flex flex-wrap align-items-center justify-content-between gap-3" style="background: #0d6efd;">
                     <div class="d-flex align-items-center gap-3">
@@ -191,7 +186,7 @@
                             <img src="{{ url_for('static', filename='uploads/tedxdeu-logo.png') }}" alt="TEDxDEU Logo" class="img-fluid rounded" style="max-height: 40px; object-fit: contain;">
                         </div>
                         <div>
-                            <h5 class="fw-bold mb-0 text-white">Sponsorship Coordinator — TEDxDEU</h5>
+                            <h5 class="fw-bold mb-0 text-white">Denetim Kurulu Üyesi — TEDxDEU</h5>
                             <span class="text-white-50 small">Dokuz Eylül Üniversitesi</span>
                         </div>
                     </div>
@@ -201,16 +196,15 @@
                 </div>
                 <div class="card-body p-4 bg-white">
                     <p class="text-secondary leading-relaxed mb-3">
-                        Sponsorluk süreçlerini yöneterek 100.000 TL'nin üzerinde fon sağladım ve 500'den fazla katılımcının yer aldığı organizasyonun lojistiğini koordine ettim.
+                        Organizasyonun bütçe harcamalarını ve resmi kayıtlarını denetlemekteyim. Geçmiş dönemde Sponsorluk Koordinatörü olarak 100.000 TL'nin üzerinde fon sağladım.
                     </p>
                     <div class="d-flex flex-wrap gap-2 pt-2 border-top">
                         <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">Sponsorship</span>
-                        <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">Corporate Relations</span>
+                        <span class="badge rounded-pill fw-normal px-3 py-1 border" style="background-color: #e7f1ff; color: #0d6efd;">Auditing</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Tıklama / Detay Butonu -->
             <div class="text-center">
                 <a href="{{ url_for('liderlik') }}" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm">
                     Tüm Liderlik Deneyimlerini Gör <i class="fa-solid fa-arrow-right ms-2"></i>
@@ -233,8 +227,8 @@
         <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">MATLAB</span>
         <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">AutoCAD</span>
         <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">Flask</span>
-        <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">TensorFlow</span>
-        <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">LTSpice</span>
+        <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">PyTorch</span>
+        <span class="bg-white px-3 py-2 rounded-pill border shadow-sm fw-semibold text-dark">Proteus</span>
     </div>
 
     <a href="{{ url_for('yetenekler') }}" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold shadow-sm">
@@ -242,18 +236,37 @@
     </a>
 </div>
 
-<!-- ==================== CV ÖNİZLEME MODALI ==================== -->
-<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+<!-- ==================== CV MODALLARI (ÖNİZLEME) ==================== -->
+
+<!-- 1. English CV Modal -->
+<div class="modal fade" id="cvEnModal" tabindex="-1" aria-labelledby="cvEnModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered" style="height: 90vh;">
         <div class="modal-content h-100 shadow-lg rounded-4 overflow-hidden border-0">
             <div class="modal-header bg-primary text-white py-3">
-                <h5 class="modal-title fw-bold" id="cvModalLabel">
-                    <i class="fa-solid fa-file-pdf me-2"></i>Batın Buğra ALTUN — Özgeçmiş (CV)
+                <h5 class="modal-title fw-bold" id="cvEnModalLabel">
+                    <i class="fa-solid fa-file-pdf me-2"></i>Batın Buğra ALTUN — Resume (English)
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0" style="height: calc(100% - 60px);">
+                <iframe src="{{ url_for('static', filename='uploads/CV_EN.pdf') }}" width="100%" height="100%" style="border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Türkçe CV Modal -->
+<div class="modal fade" id="cvTrModal" tabindex="-1" aria-labelledby="cvTrModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" style="height: 90vh;">
+        <div class="modal-content h-100 shadow-lg rounded-4 overflow-hidden border-0">
+            <div class="modal-header bg-primary text-white py-3">
+                <h5 class="modal-title fw-bold" id="cvTrModalLabel">
+                    <i class="fa-solid fa-file-pdf me-2"></i>Batın Buğra ALTUN — Özgeçmiş (Türkçe)
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
             </div>
             <div class="modal-body p-0" style="height: calc(100% - 60px);">
-                <iframe src="{{ url_for('static', filename='uploads/CV.pdf') }}" width="100%" height="100%" style="border: none;"></iframe>
+                <iframe src="{{ url_for('static', filename='uploads/CV_TR.pdf') }}" width="100%" height="100%" style="border: none;"></iframe>
             </div>
         </div>
     </div>
